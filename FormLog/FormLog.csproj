@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B5377AE8-4461-4A59-B703-37401C01397D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FormLog</RootNamespace>
+    <AssemblyName>FormLog</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\MySQL\Connector.NET 6.9\Assemblies\v2.0\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormAdaugareAnunt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormAdaugareAnunt.Designer.cs">
+      <DependentUpon>FormAdaugareAnunt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormAddAngajat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormAddAngajat.Designer.cs">
+      <DependentUpon>FormAddAngajat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormAdmin.Designer.cs">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormAngajat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormAngajat.Designer.cs">
+      <DependentUpon>FormAngajat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormAngajatCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormAngajatCrud.Designer.cs">
+      <DependentUpon>FormAngajatCrud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormCRUD.Designer.cs">
+      <DependentUpon>FormCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormDeleteAngajat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormDeleteAngajat.Designer.cs">
+      <DependentUpon>FormDeleteAngajat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormEditareAnunt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormEditareAnunt.Designer.cs">
+      <DependentUpon>FormEditareAnunt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormModificareAngajat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormModificareAngajat.Designer.cs">
+      <DependentUpon>FormModificareAngajat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Formoperatiipeangajati.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Formoperatiipeangajati.Designer.cs">
+      <DependentUpon>Formoperatiipeangajati.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormRaport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormRaport.Designer.cs">
+      <DependentUpon>FormRaport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormStergereAnunt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormStergereAnunt.Designer.cs">
+      <DependentUpon>FormStergereAnunt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormVizualizareAngajati.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormVizualizareAngajati.Designer.cs">
+      <DependentUpon>FormVizualizareAngajati.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="UI\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormAdaugareAnunt.resx">
+      <DependentUpon>FormAdaugareAnunt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormAddAngajat.resx">
+      <DependentUpon>FormAddAngajat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormAngajat.resx">
+      <DependentUpon>FormAngajat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormAngajatCrud.resx">
+      <DependentUpon>FormAngajatCrud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\FormCRUD.resx">
+      <DependentUpon>FormCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormDeleteAngajat.resx">
+      <DependentUpon>FormDeleteAngajat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormEditareAnunt.resx">
+      <DependentUpon>FormEditareAnunt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormModificareAngajat.resx">
+      <DependentUpon>FormModificareAngajat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Formoperatiipeangajati.resx">
+      <DependentUpon>Formoperatiipeangajati.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormRaport.resx">
+      <DependentUpon>FormRaport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormStergereAnunt.resx">
+      <DependentUpon>FormStergereAnunt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormVizualizareAngajati.resx">
+      <DependentUpon>FormVizualizareAngajati.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="blue-abstract-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="descărcare.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="background-backgrounds-pattern-tumblr-background-wood-favim-com-260514.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="user-settings-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Benjigarner-Rise-Folder-Aluminium-group.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data_management.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BL\BL.csproj">
+      <Project>{96d9343a-daef-4e6b-a7e2-d6debd29ffbd}</Project>
+      <Name>BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{d16e2ff5-c84c-4477-8288-c7488c563ed5}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
